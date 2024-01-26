@@ -1,0 +1,82 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100dvh; 
+    width: 95dvw; 
+}
+
+
+#nome-revista {
+  position: absolute;
+  align-items: center;
+  top: 40px;
+  left: 35%;
+  width: 500px;
+  height: auto;
+}
+
+.circle-button {
+  position: absolute; 
+  top: 30px; 
+  left: 1400px; 
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3;
+  border-color: #2a3492;
+  border-radius: 50%;
+  cursor: pointer;
+  padding-right: 3px;
+  padding-top: 3px;
+}
+
+.circle-button i {
+  font-size: 30px; 
+  color: #2a3492;
+}
+
+.content {
+  font-family: "IBM Plex Mono", monospace;
+  align-content: center;
+  position: absolute;
+  left: 23%;
+  top: 200px;
+  max-width: 900px; 
+  margin-right: auto; 
+  margin-left: auto;
+  text-align: justify;
+}
+
+.toggle-content {
+  display: none;
+}
+h4[data-target] {
+  position: relative;
+  cursor: pointer;
+}
+
+h4[data-target]::after {
+  content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px; 
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+h4[data-target].active::after {
+  border-top: none;
+  border-bottom: 5px solid black;
+  top: 50%;
+  right: -20px; 
+  transform: translateY(-50%);
+ 
+}

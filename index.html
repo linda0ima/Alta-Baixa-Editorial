@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>AltaBaixa</title>
+</head>
+<body>
+    
+    <div id="white-side" class="half" onclick="flip('white-side')">
+        <img src="img/baixa.png" id="imagem-baixa">
+        <img src="img/baixa.png" id="imagem-bback">
+        <img src="img/baixa.png" id="imagem-bback2">
+        <img src="img/baixa.png" id="imagem-bback3">
+        <img src="img/baixa.png" id="imagem-bback4">
+        <img src="img/baixa.png" id="imagem-bback5">
+    </div>
+    <div id="blue-side" class="half" onclick="flip('blue-side')">
+        <img src="img/alta.png" id="imagem-alta">
+        <img src="img/alta.png" id="imagem-aback">
+        <img src="img/alta.png" id="imagem-aback2">
+        <img src="img/alta.png" id="imagem-aback3">
+        <img src="img/alta.png" id="imagem-aback4">
+        <img src="img/alta.png" id="imagem-aback5">
+    </div>
+</body>
+<script>
+    function flip(sideId) {
+    var body = document.body;
+
+    if (sideId === 'white-side') {
+        body.classList.add('slide-right');
+    } else if (sideId === 'blue-side') {
+        body.classList.add('slide-left');
+    }
+
+    setTimeout(function() {
+        
+        if (sideId === 'white-side') {
+            window.location.href = 'white-side-page.html';
+        } else if (sideId === 'blue-side') {
+            window.location.href = 'blue-side-page.html';
+        }
+    }, 300); 
+}
+</script>
+</html>
+
+          
